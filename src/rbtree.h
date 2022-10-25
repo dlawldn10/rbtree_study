@@ -33,10 +33,17 @@ node_t *rbtree_max(const rbtree *);
 int rbtree_erase(rbtree *, node_t *);
 
 int rbtree_to_array(const rbtree *, key_t *, const size_t);
+int node_to_array(const rbtree *, node_t *, key_t *, int);
 
 void right_rotate(rbtree *, node_t *);
 void left_rotate(rbtree *, node_t *);
 void insert_fixup(rbtree *, node_t *);
 node_t *rbtree_insert(rbtree *, const key_t);
+void transplant(rbtree *, node_t*, node_t *);
+void transplant(rbtree *, node_t*, node_t *);
+void erase_fixup(rbtree *, node_t*);
+
+node_t* subtree_minimum(rbtree* , node_t* );
+
 
 #endif  // _RBTREE_H_
